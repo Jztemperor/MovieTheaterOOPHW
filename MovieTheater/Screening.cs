@@ -35,6 +35,11 @@ namespace MovieTheater
         
         }
 
+        private int rowToInt(char letter)
+        {            
+            return letter - 'A' + 1;           
+        }
+
         public void displayRoom()
         {
             Console.WriteLine(Movie);
@@ -49,8 +54,10 @@ namespace MovieTheater
             Console.WriteLine();
         }
 
-        public void reserveSeat(int row, int col, string actionType, Theater theater, string customerType)
+        public void reserveSeat(char rowLetter, int col, string actionType, Theater theater, string customerType)
         {
+            int row = rowToInt(rowLetter);
+
             if(actionType == "foglalas")
             {
                 if (Seats[row-1,col-1] == SeatState.szabad)

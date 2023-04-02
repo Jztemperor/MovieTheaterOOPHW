@@ -23,7 +23,7 @@
                 string size = fields[0];
                 string movie = fields[1];
                 string interval = fields[2];
-                int row = int.Parse(fields[3]);
+                char row = char.Parse(fields[3]);
                 int col = int.Parse(fields[4]);
                 string actionType = fields[5];
                 string customer = fields[6];
