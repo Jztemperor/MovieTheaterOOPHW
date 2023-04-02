@@ -34,7 +34,7 @@
                 {
                     
                     screening = new Screening(smallTheater, movie, interval);
-                    bool screeningInList = smallTheater.Screenings.Any(sc => sc.Movie == movie && sc.Interval == interval);
+                    bool screeningInList = smallTheater.Screenings.Any(sc =>  sc.Interval == interval);
                     if(!screeningInList)
                     {
                         smallTheater.Screenings.Add(screening);
@@ -42,7 +42,7 @@
                     }
                     else
                     {
-                        Screening existing = smallTheater.Screenings.FirstOrDefault(sc => sc.Movie == movie && sc.Interval == interval);
+                        Screening existing = smallTheater.Screenings.FirstOrDefault(sc =>  sc.Interval == interval);
                         existing.reserveSeat(row, col, actionType, smallTheater, customer);
                     }
                    
@@ -51,7 +51,7 @@
                 {
                    
                     screening = new Screening(bigTheater, movie, interval);
-                    bool screeningInList = bigTheater.Screenings.Any(sc => sc.Movie == movie && sc.Interval == interval);
+                    bool screeningInList = bigTheater.Screenings.Any(sc =>  sc.Interval == interval);
                     if (!screeningInList)
                     {
                         bigTheater.Screenings.Add(screening);
@@ -59,7 +59,7 @@
                     }
                     else
                     {
-                        Screening existing = bigTheater.Screenings.FirstOrDefault(sc => sc.Movie == movie && sc.Interval == interval);
+                        Screening existing = bigTheater.Screenings.FirstOrDefault(sc =>  sc.Interval == interval);
                         existing.reserveSeat(row, col, actionType, bigTheater, customer);
                     }
                    
@@ -68,7 +68,7 @@
                 {
                    
                     screening = new Screening(vipTheater, movie, interval);
-                    bool screeningInList = vipTheater.Screenings.Any(sc => sc.Movie == movie && sc.Interval == interval);
+                    bool screeningInList = vipTheater.Screenings.Any(sc =>  sc.Interval == interval);
                     if (!screeningInList)
                     {
                         vipTheater.Screenings.Add(screening);
@@ -76,7 +76,7 @@
                     }
                     else
                     {
-                        Screening existing = vipTheater.Screenings.FirstOrDefault(sc => sc.Movie == movie && sc.Interval == interval);
+                        Screening existing = vipTheater.Screenings.FirstOrDefault(sc =>  sc.Interval == interval);
                         existing.reserveSeat(row, col, actionType, vipTheater, customer);
                     }
                    
