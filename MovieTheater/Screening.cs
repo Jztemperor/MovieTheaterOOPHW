@@ -42,6 +42,7 @@ namespace MovieTheater
 
         public void displayRoom()
         {
+            Console.WriteLine();
             Console.WriteLine(Movie);
             for (int i = 0; i < Seats.GetLength(0); i++)
             {
@@ -52,6 +53,7 @@ namespace MovieTheater
                 }
             }
             Console.WriteLine();
+           
         }
 
         public void reserveSeat(char rowLetter, int col, string actionType, Theater theater, string customerType)
