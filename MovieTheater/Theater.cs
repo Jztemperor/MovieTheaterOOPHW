@@ -7,8 +7,9 @@
         // a feladat "helper"
         public int biggestCount()
         {
-            Screening screening = Screenings.OrderByDescending(s => s.ViewCount).FirstOrDefault();
-            return screening.ViewCount;
+            // Screening screening = Screenings.OrderByDescending(s => s.ViewCount).FirstOrDefault();
+            int max = Screenings.Max(screening => screening.ViewCount);          
+            return max;
         }
         
         

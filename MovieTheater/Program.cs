@@ -35,9 +35,8 @@
                         {
                             maxVals.Add(t.biggestCount());
                         }
-                        int max = maxVals.Max();
                         
-                        //int max2 = theater.SelectMany(t => t.Screenings).Select(sc => sc.ViewCount).Max();
+                        int max = maxVals.Max();                                             
 
                         foreach (Theater t in theater)
                         {
